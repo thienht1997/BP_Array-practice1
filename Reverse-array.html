@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse array</title>
+</head>
+<body>
+<script>
+    let x = [];
+    let input = parseInt(prompt("So phan tu muon nhap la"));
+    for (let i = 0; i < input; i++){
+        x[i] = prompt("Nhap vao cac phan tu")
+    }
+    document.write("Phan tu nhap vao la " + x + "<br>");
+    let first = 0;
+    let last = x.length - 1;
+    while (first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
+    }
+    document.write("Mang sau khi dao nguoc la   " + x);
+</script>
+</body>
+</html>
